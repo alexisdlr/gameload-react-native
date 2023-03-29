@@ -1,31 +1,62 @@
-import { StyleSheet, Text, View } from "react-native"
+import { ScrollView } from "react-native";
+import { FlatList } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import FadeInView from "../components/FadeInView";
+import GameItem from "../components/GameItem";
 import NavBar from "../components/Navbar";
+import useGames from "../hooks/useGames";
 
 const Games = () => {
+  const { games } = useGames();
   return (
     <View style={styles.container}>
       <NavBar />
-      <Text style={styles.title}>Bienvenido a GameLoad!</Text>
+      <FadeInView style={{ marginTop: 80 }}>
+        <Text style={styles.title}>Juegos</Text>
+      </FadeInView>
+      <ScrollView>
+        {games ? (
+          <FadeInView>
+            <FlatList
+              data={games}
+              renderItem={({ item }) => <GameItem game={item} />}
+              keyExtractor={(item) => item._id.toString()}
+              style={{ marginVertical: 50 }}
+            />
+          </FadeInView>
+        ) : (
+          <Text
+            style={{
+              color: "red",
+              fontSize: 25,
+              fontWeight: "bold",
+              textAlign: "center",
+              marginVertical: 50,
+            }}
+          >
+            Hubo un error
+          </Text>
+        )}
+      </ScrollView>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000114',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#000114",
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
-    color: '#5800FF',
+    color: "#5800FF",
     marginVertical: 20,
     paddingHorizontal: 20,
-    fontSize: 30,
-    textAlign: 'center',
-    fontWeight: 'bold'
-  }
+    fontSize: 40,
+    textAlign: "center",
+    fontWeight: "bold",
+  },
 });
 
-export default Games
-
+export default Games;
