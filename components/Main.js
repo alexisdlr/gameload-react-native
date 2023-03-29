@@ -10,11 +10,23 @@ const Tab = createBottomTabNavigator();
 
 
 const Main = () => {
+    function getTabBarVisibility(route) {
+        const routeName = route.state
+          ? route.state.routes[route.state.index].name
+          : '';
+      
+        if (routeName === 'Auth') {
+          return false;
+        }
+      
+        return true;
+      }
     return(
         <View style={{backgroundColor: '#000114', width: '100%'}}>
         <NavigationContainer style={{paddindVertical: 20}} >
           <Tab.Navigator
             screenOptions={({ route }) => ({
+             tabBarVisible: getTabBarVisibility(route),
               tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
     
@@ -25,6 +37,7 @@ const Main = () => {
                 } else if (route.name === 'Juegos') {
                   iconName = focused ? 'game-controller-outline' : 'game-controller-outline';
                 }
+                
                 size = 30
     
                 // You can return any component that you like here!

@@ -1,5 +1,4 @@
 import { StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
-import { Link } from 'react-router-native';
 
 const NavBar = () => {
     const {width} = useWindowDimensions()
@@ -7,9 +6,7 @@ const NavBar = () => {
     <View style={[styles.nav, {width}]}>
       <Text style={styles.logo}>GameLoadX</Text>
       <TouchableOpacity style={styles.button} >
-        <Link to={'/auth'} replace>
         <Text style={styles.loginText}>Login</Text>
-        </Link>
       </TouchableOpacity>
     </View>
   );

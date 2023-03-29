@@ -2,10 +2,10 @@ import { StyleSheet } from "react-native"
 import { Text } from "react-native"
 import { View } from "react-native"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { clientAxios } from "../axios/clientAxios";
 import { useCallback, useState } from "react";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { clientAxios } from "../axios/clientAxios";
 
 const AuthView = () => {
   const [inputs, setInputs] = useState({
