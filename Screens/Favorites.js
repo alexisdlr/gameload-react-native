@@ -4,7 +4,6 @@ import useGames from "../hooks/useGames";
 import { ScrollView } from "react-native";
 import { FlatList } from "react-native";
 import GameItem from "../components/GameItem";
-import FadeInView from "../components/FadeInView";
 import NavBar from "../components/NavBar";
 
 const Favorites = () => {
@@ -12,7 +11,7 @@ const Favorites = () => {
   return (
     <View style={styles.container}>
       <NavBar />
-      <FadeInView>
+      <View>
         <Text
           style={{
             color: "#5800FF",
@@ -25,17 +24,15 @@ const Favorites = () => {
         >
           Tus favoritos
         </Text>
-      </FadeInView>
+      </View>
       <ScrollView horizontal>
         {favorites ? (
-          <FadeInView>
-            <FlatList
+          <FlatList
             data={favorites}
             renderItem={({ item }) => <GameItem game={item} isFavorite />}
             keyExtractor={(item) => item._id.toString()}
             style={{ marginVertical: 50 }}
           />
-          </FadeInView>
         ) : (
           <Text
             style={{

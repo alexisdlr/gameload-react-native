@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from "react-native";
 import GameList from "../components/GameList";
 import bg from "../assets/bg.jpg";
 import { ScrollView } from "react-native";
-import FadeInView from "../components/FadeInView";
 import NavBar from "../components/NavBar";
 
 const Home = () => {
@@ -19,7 +18,7 @@ const Home = () => {
           defaultSource={bg}
           style={{ width: "100%", height: "100%", zIndex: -1 }}
         >
-          <FadeInView style={{height: '100%'}}>
+          <View style={{height: '100%'}}>
             <View style={[styles.textContainer, { height }]}>
               <Text style={styles.title}>Bienvenido a GameLoad!</Text>
               <Text style={styles.description}>
@@ -28,7 +27,7 @@ const Home = () => {
                 experiencia.
               </Text>
             </View>
-          </FadeInView>
+          </View>
         </ImageBackground>
 
         <GameList />

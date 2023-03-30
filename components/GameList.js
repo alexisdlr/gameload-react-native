@@ -2,7 +2,6 @@ import { Text } from "react-native";
 import { ScrollView } from "react-native";
 import { FlatList, View } from "react-native";
 import useGames from "../hooks/useGames";
-import FadeInView from "./FadeInView";
 import GameItem from "./GameItem";
 
 const GameList = () => {
@@ -29,17 +28,15 @@ const GameList = () => {
 
       <ScrollView horizontal>
         {games ? (
-          <FadeInView>
-            <FlatList
-              data={games}
-              initialNumToRender={10}
-              horizontal
-              showsHorizontalScrollIndicator
-              renderItem={({ item }) => <GameItem game={item} />}
-              keyExtractor={(item) => item._id.toString()}
-              style={{ marginVertical: 50 }}
-            />
-          </FadeInView>
+          <FlatList
+            data={games}
+            initialNumToRender={10}
+            horizontal
+            showsHorizontalScrollIndicator
+            renderItem={({ item }) => <GameItem game={item} />}
+            keyExtractor={(item) => item._id.toString()}
+            style={{ marginVertical: 50 }}
+          />
         ) : (
           <Text
             style={{
