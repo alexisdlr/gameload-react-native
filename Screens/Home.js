@@ -2,10 +2,10 @@ import { useWindowDimensions } from "react-native";
 import { ImageBackground } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 import GameList from "../components/GameList";
-import NavBar from "../components/Navbar";
 import bg from "../assets/bg.jpg";
 import { ScrollView } from "react-native";
 import FadeInView from "../components/FadeInView";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   const { width, height } = useWindowDimensions();

@@ -5,7 +5,7 @@ import { ScrollView } from "react-native";
 import { FlatList } from "react-native";
 import GameItem from "../components/GameItem";
 import FadeInView from "../components/FadeInView";
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 
 const Favorites = () => {
   const { favorites } = useGames();

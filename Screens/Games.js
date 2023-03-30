@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 import FadeInView from "../components/FadeInView";
 import GameItem from "../components/GameItem";
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import useGames from "../hooks/useGames";
 
 const Games = () => {

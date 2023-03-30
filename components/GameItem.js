@@ -1,5 +1,5 @@
 import { Image, Text, View, TouchableOpacity } from "react-native";
-import { StyleSheet } from "react-native-web";
+import { StyleSheet } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import useGames from "../hooks/useGames";
 import { Linking } from "react-native";
