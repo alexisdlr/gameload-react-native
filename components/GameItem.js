@@ -19,7 +19,9 @@ const GameItem = ({ game, isFavorite }) => {
   }
   return (
     <View style={styles.cardContainer}>
-      <Image source={game.img} style={styles.img} />
+      <Image source={{
+        uri: game.img
+      }} style={styles.img} />
 
       <View>
         <Text style={styles.text}>{game.name}</Text>
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
   img: {
     width: 200,
     height: 200,
-    borderRadius: "8px",
+    borderRadius: 8,
     justifyContent: "center",
   },
   cardContainer: {

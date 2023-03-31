@@ -9,7 +9,7 @@ const GameList = () => {
   return (
     <View
       style={{
-        marginVertical: 30,
+        marginVertical: 80,
         justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 30,
@@ -26,7 +26,6 @@ const GameList = () => {
         Juegos que podrían gustarte:
       </Text>
 
-      <ScrollView horizontal>
         {games ? (
           <FlatList
             data={games}
@@ -50,7 +49,6 @@ const GameList = () => {
             Hubo un error
           </Text>
         )}
-      </ScrollView>
     </View>
   );
 };

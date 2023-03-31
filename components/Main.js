@@ -12,8 +12,8 @@ const Tab = createBottomTabNavigator();
 const Main = () => {
     
     return(
-        <View style={{backgroundColor: '#000114', width: '100%'}}>
-        <NavigationContainer style={{paddindVertical: 20}} >
+        <View style={{backgroundColor: '#000114', width: '100%', height: '100%'}}>
+        <NavigationContainer >
           <Tab.Navigator
             screenOptions={({ route }) => ({
               tabBarIcon: ({ focused, color, size }) => {
@@ -42,7 +42,7 @@ const Main = () => {
               
             }) }
           >
-            <Tab.Screen name="Home" component={Home} options={{ tabBarVisible: false }} />
+            <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Juegos" component={Games} />
             <Tab.Screen name="Favoritos" component={Favorites} />
           </Tab.Navigator>

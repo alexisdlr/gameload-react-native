@@ -25,7 +25,6 @@ const Favorites = () => {
           Tus favoritos
         </Text>
       </View>
-      <ScrollView horizontal>
         {favorites ? (
           <FlatList
             data={favorites}
@@ -46,7 +45,6 @@ const Favorites = () => {
             No hay favoritos
           </Text>
         )}
-      </ScrollView>
     </View>
   );
 };

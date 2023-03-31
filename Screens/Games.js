@@ -13,7 +13,6 @@ const Games = () => {
       <View style={{ marginTop: 80 }}>
         <Text style={styles.title}>Juegos</Text>
       </View>
-      <ScrollView>
         {games ? (
           <FlatList
             data={games}
@@ -34,7 +33,6 @@ const Games = () => {
             Hubo un error
           </Text>
         )}
-      </ScrollView>
     </View>
   );
 };

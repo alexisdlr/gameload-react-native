@@ -1,4 +1,3 @@
-import { useWindowDimensions } from "react-native";
 import { ImageBackground } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 import GameList from "../components/GameList";
@@ -7,19 +6,18 @@ import { ScrollView } from "react-native";
 import NavBar from "../components/NavBar";
 
 const Home = () => {
-  const { width, height } = useWindowDimensions();
 
   return (
-    <ScrollView style={[styles.container, { width }]}>
+    <ScrollView style={styles.container}>
       <View>
         <NavBar />
         <ImageBackground
           source={bg}
           defaultSource={bg}
-          style={{ width: "100%", height: "100%", zIndex: -1 }}
+          style={{ width: "100%", height: "80%", zIndex: -1 }}
         >
-          <View style={{height: '100%'}}>
-            <View style={[styles.textContainer, { height }]}>
+          <View style={{height: '50%'}}>
+            <View style={styles.textContainer}>
               <Text style={styles.title}>Bienvenido a GameLoad!</Text>
               <Text style={styles.description}>
                 Cientos de títulos en videojuegos y opciones para todos los
@@ -38,7 +36,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundImage: "url(../assets/bg.jpg)",
+    width: '100%',
     flex: 1,
     backgroundColor: "#000114",
   },
@@ -58,6 +56,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   textContainer: {
+    height: '100%',
     flex: 1,
     alignItems: "center",
     alignContent: "center",
