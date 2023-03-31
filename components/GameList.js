@@ -1,5 +1,4 @@
 import { Text } from "react-native";
-import { ScrollView } from "react-native";
 import { FlatList, View } from "react-native";
 import useGames from "../hooks/useGames";
 import GameItem from "./GameItem";
@@ -9,7 +8,7 @@ const GameList = () => {
   return (
     <View
       style={{
-        marginVertical: 80,
+        marginTop: 50,
         justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 30,

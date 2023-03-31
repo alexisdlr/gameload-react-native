@@ -8,15 +8,14 @@ import NavBar from "../components/NavBar";
 const Home = () => {
 
   return (
-    <ScrollView style={styles.container}>
-      <View>
+    <ScrollView style={styles.container} >
         <NavBar />
         <ImageBackground
           source={bg}
           defaultSource={bg}
-          style={{ width: "100%", height: "80%", zIndex: -1 }}
+          style={{ width: "100%", height: 1000, zIndex: -1 }}
         >
-          <View style={{height: '50%'}}>
+          <View style={{height: '100%'}}>
             <View style={styles.textContainer}>
               <Text style={styles.title}>Bienvenido a GameLoad!</Text>
               <Text style={styles.description}>
@@ -27,9 +26,7 @@ const Home = () => {
             </View>
           </View>
         </ImageBackground>
-
         <GameList />
-      </View>
     </ScrollView>
   );
 };
@@ -37,6 +34,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    height: '100%',
     flex: 1,
     backgroundColor: "#000114",
   },
