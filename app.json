@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "gameload",
-    "slug": "gameload",
-    "version": "1.0.0",
+    "name": "gameloadx",
+    "slug": "gameloadx",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.alexisdlr.gameload"
+      "package": "com.alxsdlr.gameload"
     },
     "web": {
       "favicon": "./assets/favicon.png"
